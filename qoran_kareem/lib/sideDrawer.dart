@@ -32,35 +32,30 @@ class _sideDrawer_PageState extends State<sideDrawer_Page> {
               ),
             ),
           ),
-
-          ExpansionTile(
+          ListTile(
             leading: Icon(Icons.list_alt, color: Colors.grey),
             title: Text('الاحزاب',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            children: [],
+            onTap: () => {},
           ),
-
-          // Companies section
-          ExpansionTile(
+          ListTile(
             leading: Icon(Icons.library_books, color: Colors.grey),
             title: Text('الاجزاء',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            children: [],
+            onTap: () => {},
           ),
-
-          ExpansionTile(
+          ListTile(
             leading: Icon(Icons.menu_book, color: Colors.grey),
             title: Text('السور',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            children: [],
+            onTap: () => {},
           ),
-          ExpansionTile(
+          ListTile(
             leading: Icon(Icons.article, color: Colors.grey),
             title: Text('الاربع',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            children: [],
+            onTap: () => {},
           ),
-          // Additional drawer items
         ],
       ),
     );

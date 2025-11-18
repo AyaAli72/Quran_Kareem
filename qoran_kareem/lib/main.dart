@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sideDrawer.dart';
+import 'Screen/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,17 +9,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'القران الكريم',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'القران الكريم'),
+      title: 'القرآن الكريم',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color.fromARGB(255, 107, 103, 112),
+        ),
+        useMaterial3: true,
+        fontFamily: 'Roboto', // Optional: add Arabic font later
+      ),
+      home: SplashScreen(),
     );
   }
 }
@@ -38,20 +41,23 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       drawer: sideDrawer_Page(),
       appBar: AppBar(
-        toolbarHeight: 45,
+        backgroundColor: Colors.grey.shade300,
+        toolbarHeight: 55,
         centerTitle: true,
-        backgroundColor: Colors.grey,
+        elevation: 0,
         title: const Padding(
-            padding: EdgeInsets.only(top: 10, bottom: 5, right: 30, left: 30),
-            child: Text(
-              'القران الكريم',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
-            )),
+          padding: EdgeInsets.symmetric(vertical: 6),
+          child: Text(
+            'القرآن الكريم',
+            style: TextStyle(
+              fontSize: 26,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
-      body: Center(),
+      body: const Center(),
     );
   }
 }
