@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'sideDrawer.dart';
 import 'Screen/SplashScreen.dart';
+import 'pdf_Viewer.dart'; // Import the PDF viewer page
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'القرآن الكريم',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 107, 103, 112),
-        ),
         useMaterial3: true,
-        fontFamily: 'Roboto', // Optional: add Arabic font later
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 107, 103, 112),
+        ),
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
@@ -57,7 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: const Center(),
+      // PDF viewer as the main content
+      body: const PdfViewerPage(),
     );
   }
 }
