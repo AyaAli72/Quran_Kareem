@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'sideDrawer.dart';
 import 'Screen/SplashScreen.dart';
-import 'pdf_Viewer.dart'; // Import the PDF viewer page
+import 'pdf_Viewer.dart';
+
 
 void main() {
   runApp(const MyApp());
