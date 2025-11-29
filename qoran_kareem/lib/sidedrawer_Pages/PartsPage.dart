@@ -27,7 +27,8 @@ class _PartsPageState extends State<PartsPage> {
             ),
           ),
         ),
-        body: Center(
+        body:SingleChildScrollView( 
+        child: Center(
             child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -213,7 +214,8 @@ class _PartsPageState extends State<PartsPage> {
             ),
           ],
         ),
-        ),
+         ),
+          ),
         );
   }
 }

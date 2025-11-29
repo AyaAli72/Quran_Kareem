@@ -25,7 +25,22 @@ class _ArbaPageState extends State<ArbaPage> {
           ),
         ),
       ),
-      body: const Text("Hello"),
+      body: SingleChildScrollView(
+        child: Center(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              ListTile(
+                leading: Icon(Icons.list_alt, color: Colors.grey),
+                title: Text('الربع 1',
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                onTap: () => {},
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

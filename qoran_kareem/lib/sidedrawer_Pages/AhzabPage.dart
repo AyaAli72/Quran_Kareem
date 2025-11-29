@@ -25,7 +25,8 @@ class _AhzabPageState extends State<AhzabPage> {
           ),
         ),
       ),
-      body: Center(
+      body:SingleChildScrollView( 
+        child: Center(
         child: ListView(padding: EdgeInsets.zero, children: [
           ListTile(
             leading: Icon(Icons.list_alt, color: Colors.grey),
@@ -387,7 +388,9 @@ class _AhzabPageState extends State<AhzabPage> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             onTap: () => {},
           ),
-        ]),
+        ],
+        ),
+      ),
       ),
     );
   }
